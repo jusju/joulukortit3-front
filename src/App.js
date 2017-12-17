@@ -31,6 +31,8 @@ class Osoite extends Component {
           <td>{this.props.osoite.id}</td>
           <td>{this.props.osoite.nimi}</td>
           <td>{this.props.osoite.katuosoite}</td>
+          <td>{this.props.osoite.postinumero}</td>
+          <td>{this.props.osoite.postitoimipaikka}</td>
           <td>{this.props.osoite.maa}</td>
         </tr>
       );
@@ -61,7 +63,7 @@ class App extends Component {
     });
   }
   render() {
-  
+
       var osoitteet = this.state.osoitteet.map(osoite => <Osoite 
         key={osoite.id} 
       osoite={osoite} />);
